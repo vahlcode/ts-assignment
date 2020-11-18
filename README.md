@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Timescale frontend interview assignment
 
 There are two parts to this assignment which should take around an hour to complete.
@@ -49,6 +48,3 @@ yarn test
 ### Finished result
 
 All of the tests in the `/javascript-questions/test` directory should pass.
-=======
-# ts-assignment
->>>>>>> 0a55197e0cf84a7ab5cb328004f7feb90ac07f6d
