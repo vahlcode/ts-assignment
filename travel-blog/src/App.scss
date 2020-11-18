@@ -6,15 +6,329 @@ $profile-image-width: 300px;
 
 $gutter: 8px;
 $gray: #333;
-$primary: #1977F3;
-$primary-light: #EEF5FE;
+$primary: #1977f3;
+$primary-light: #eef5fe;
 
 $small-breakpoint: 500px;
 $medium-breakpoint: 960px;
+
+body {
+  font-size: 16px;
+}
 
 .app {
   * {
     font-family: 'Inter', sans-serif;
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .header {
+    background: $primary-light;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: $gutter 16px;
+
+    .branding {
+      .site-title {
+        font-weight: 400;
+      }
+      .site-description {
+        font-style: italic;
+      }
+    }
+
+    .nav {
+      .nav-items {
+        display: none;
+        align-items: center;
+
+        .nav-item {
+          list-style: none;
+
+          .nav-link {
+            text-decoration: none;
+            color: $gray;
+            padding: $gutter 16px;
+            background: transparent;
+          }
+
+          .nav-link.active {
+            color: #ffffff;
+            background: $primary;
+            border-radius: 4px;
+          }
+        }
+      }
+    }
+  }
+
+  .author-bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 16px;
+
+    .author-image {
+      width: $profile-image-width;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    .author-info {
+      .author-info-title {
+        margin-bottom: 20px;
+      }
+      .author-info-paragraph {
+        line-height: 1.5em;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .footer {
+    background: $primary;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: $gutter 16px;
+    color: #ffffff;
+
+    .footer-menu {
+      .footer-menu-items {
+        display: flex;
+        align-items: center;
+
+        .footer-menu-item {
+          list-style: none;
+          padding: $gutter;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $medium-breakpoint) {
+  .app {
+    * {
+      font-family: 'Inter', sans-serif;
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .header {
+      background: $primary-light;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: $gutter 100px;
+
+      .branding {
+        .site-title {
+          font-weight: 400;
+        }
+        .site-description {
+          font-style: italic;
+        }
+      }
+
+      .nav {
+        .nav-items {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+
+          .nav-item {
+            list-style: none;
+
+            .nav-link {
+              text-decoration: none;
+              color: $gray;
+              padding: $gutter 16px;
+              background: transparent;
+            }
+
+            .nav-link.active {
+              color: #ffffff;
+              background: $primary;
+              border-radius: 4px;
+            }
+          }
+        }
+      }
+    }
+
+    .author-bio {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: row;
+      padding: 20px 100px;
+
+      .author-image {
+        width: $profile-image-width;
+        margin-right: $gutter;
+        img {
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+
+      .author-info {
+        .author-info-title {
+          margin-bottom: 20px;
+        }
+        .author-info-paragraph {
+          line-height: 1.5em;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .footer {
+      background: $primary;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: $gutter 100px;
+      color: #ffffff;
+
+      .footer-menu {
+        .footer-menu-items {
+          display: flex;
+          align-items: center;
+
+          .footer-menu-item {
+            list-style: none;
+            padding: $gutter;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .app {
+    * {
+      font-family: 'Inter', sans-serif;
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .header {
+      background: $primary-light;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: $gutter 200px;
+
+      .branding {
+        .site-title {
+          font-weight: 400;
+        }
+        .site-description {
+          font-style: italic;
+        }
+      }
+
+      .nav {
+        .nav-items {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+
+          .nav-item {
+            list-style: none;
+
+            .nav-link {
+              text-decoration: none;
+              color: $gray;
+              padding: $gutter 16px;
+              background: transparent;
+            }
+
+            .nav-link.active {
+              color: #ffffff;
+              background: $primary;
+              border-radius: 4px;
+            }
+          }
+        }
+      }
+    }
+
+    .author-bio {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: row;
+      padding: 20px 200px;
+
+      .author-image {
+        width: $profile-image-width;
+        margin-right: $gutter;
+        img {
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+
+      .author-info {
+        .author-info-title {
+          margin-bottom: 20px;
+        }
+        .author-info-paragraph {
+          line-height: 1.5em;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .footer {
+      background: $primary;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: $gutter 200px;
+      color: #ffffff;
+
+      .footer-menu {
+        .footer-menu-items {
+          display: flex;
+          align-items: center;
+
+          .footer-menu-item {
+            list-style: none;
+            padding: $gutter;
+          }
+        }
+      }
+    }
   }
 }
